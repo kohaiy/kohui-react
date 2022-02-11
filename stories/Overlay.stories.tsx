@@ -29,7 +29,7 @@ Default.args = { visible: false };
 export const Example: Story<Props> = props => {
     const [visible, setVisible] = useState(false);
 
-    useEffect(() => setVisible(props.visible), [props.visible]);
+    useEffect(() => setVisible(props.visible ?? true), [props.visible]);
 
     return <div>
         <button onClick={() => setVisible(true)}>Open Overlay</button>
